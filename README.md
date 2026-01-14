@@ -54,7 +54,7 @@ All actions are optional and explicitly controlled.
 ---
 
 ## Repository Structure
-
+```
 WinDebloat:
 ├── autounattend.xml
 └── sources/
@@ -64,10 +64,10 @@ WinDebloat:
                 └── Debloat
                     ├── debloat.ps1
                     └── debloat.config.psd1
-
+```
     
 ## Final Installation Media Structure
-
+```
 WindowsInstallationMediaDrive:
 ├── autounattend.xml
 ├── Some of the Installation Source Files (don't touch)...
@@ -80,7 +80,7 @@ WindowsInstallationMediaDrive:
     │               └── debloat.config.psd1
     │
     └── Lots of Installation Source Files (don't touch)...
-
+```
 
 ---
 
