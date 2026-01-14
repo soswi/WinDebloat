@@ -55,7 +55,7 @@ All actions are optional and explicitly controlled.
 
 ## Repository Structure
 ```
-WinDebloat:
+WinDebloat/
 ├── autounattend.xml
 └── sources/
     └── $OEM$
@@ -68,7 +68,7 @@ WinDebloat:
     
 ## Final Installation Media Structure
 ```
-WindowsInstallationMediaDrive:
+WindowsInstallationMediaDrive/
 ├── autounattend.xml
 ├── Some of the Installation Source Files (don't touch)...
 └── sources/
