@@ -5,7 +5,7 @@ param(
   [string]$LogPath = "C:\Setup\Debloat\debloat.log"
 )
 
-function Log($msg) {
+function LogWinDebloat($msg) {
   $ts = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
   $line = "[$ts] $msg"
   $line | Tee-Object -FilePath $LogPath -Append | Out-Null
