@@ -10,11 +10,11 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
       <OOBE>
-        <!-- Zmieniaj w configu – tutaj tylko minimalne, bezpieczne skrócenie OOBE -->
+        <!-- Change in config – here only minimal, safe OOBE shortening -->
         <HideEULAPage>true</HideEULAPage>
         <ProtectYourPC>3</ProtectYourPC>
 
-        <!-- Jeśli ustawisz true, Windows ukryje ekrany logowania online w OOBE (enterprise-friendly). -->
+        <!-- If you set true, Windows will hide online login screens in OOBE (enterprise-friendly). -->
         <HideOnlineAccountScreens>false</HideOnlineAccountScreens>
       </OOBE>
 
