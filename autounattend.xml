@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+  <settings pass="oobeSystem">
+    <component name="Microsoft-Windows-Shell-Setup"
+               processorArchitecture="amd64"
+               publicKeyToken="31bf3856ad364e35"
+               language="neutral"
+               versionScope="nonSxS"
+               xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+      <OOBE>
+        <!-- Change in config – here only minimal, safe OOBE shortening -->
+        <HideEULAPage>true</HideEULAPage>
+        <ProtectYourPC>3</ProtectYourPC>
+
+        <!-- If you set true, Windows will hide online login screens in OOBE (enterprise-friendly). -->
+        <HideOnlineAccountScreens>false</HideOnlineAccountScreens>
+      </OOBE>
+
+      <FirstLogonCommands>
+        <SynchronousCommand wcm:action="add">
+          <Order>1</Order>
+          <Description>Run Debloat (config-driven)</Description>
+          <CommandLine>
+            powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Setup\Debloat\debloat.ps1" -ConfigPath "C:\Setup\Debloat\debloat.config.psd1" -LogPath "C:\Setup\Debloat\debloat.log"
+          </CommandLine>
+        </SynchronousCommand>
+      </FirstLogonCommands>
+
+    </component>
+  </settings>
+
+  <!-- $OEM$ copies to C:\ (because it maps to %SystemDrive%\) -->
+</unattend>
